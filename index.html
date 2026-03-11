@@ -40,8 +40,8 @@
    /* Reveal animation */
    .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(18px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
    }
    .reveal.visible {
     opacity: 1;
@@ -92,11 +92,11 @@
 
    /* Card hover lift */
    .lift {
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
    }
    .lift:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.3);
    }
 
    /* Horizontal line separator */
@@ -258,7 +258,7 @@
   </section>
 
   <!-- Events -->
-  <section id="events" class="py-20 sm:py-28 bg-maroon-dark grid-pattern">
+  <section id="events" class="py-20 sm:py-28 bg-maroon-dark">
    <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <div class="text-center mb-14 reveal">
      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gold mb-4">Events &amp; Competitions</h2>
@@ -274,7 +274,7 @@
        <p class="font-display text-gold text-xl font-semibold">3<sup>rd</sup> April</p>
       </div>
       <ul class="p-5 space-y-3">
-       <li class="flex items-center gap-3 text-cream/80 text-base">
+       <li class="flex items-center gap-3 text-cream/80 text-base cursor-pointer hover:text-gold transition-colors" onclick="document.getElementById('dumb-charades-modal').classList.remove('hidden')">
         <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Dumb Charades
        </li>
        <li class="flex items-center gap-3 text-cream/80 text-base cursor-pointer hover:text-gold transition-colors" onclick="document.getElementById('singing-modal').classList.remove('hidden')">
@@ -301,7 +301,7 @@
        <li class="flex items-center gap-3 text-cream/80 text-base cursor-pointer hover:text-gold transition-colors" onclick="document.getElementById('codethon-modal').classList.remove('hidden')">
         <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Codethon
        </li>
-       <li class="flex items-center gap-3 text-cream/80 text-base">
+       <li class="flex items-center gap-3 text-cream/80 text-base cursor-pointer hover:text-gold transition-colors" onclick="document.getElementById('esports-modal').classList.remove('hidden')">
         <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>E-Sports
        </li>
       </ul>
@@ -475,10 +475,10 @@
       <p class="text-gold/60 text-xs font-semibold tracking-widest uppercase mb-4">12<sup>th</sup> April — Badminton</p>
       <h3 class="font-display text-xl font-semibold text-gold mb-3">Badminton Venue</h3>
       <p class="text-cream/60 leading-relaxed mb-5">
-       National College Ground<br>
-       Shankarapura, Bengaluru
+       M.N. Krishna Rao Park Badminton Court<br>
+       WHVF+2WC, Basavanagudi, Bengaluru – 560004
       </p>
-      <a href="https://maps.google.com/?q=National+College+Ground+Shankarapura+Bengaluru"
+      <a href="https://maps.google.com/?q=WHVF+2WC+Basavanagudi+Bengaluru+560004"
        target="_blank" rel="noopener noreferrer" aria-label="View badminton venue on Google Maps"
        class="mt-auto inline-flex items-center gap-2 text-sm font-medium text-gold hover:text-gold-light transition-colors">
        View on Map
@@ -574,8 +574,7 @@
     </div>
    </div>
   </section>
-
-  <!-- Carrom Modal -->
+  
   <div id="carrom-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4">
    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="this.parentElement.classList.add('hidden')"></div>
    <div class="relative bg-maroon-deep border border-gold/20 rounded-xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 sm:p-8 shadow-2xl">
@@ -588,36 +587,40 @@
      <svg class="w-4 h-4 text-gold/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
      <span class="text-gold/80 font-medium">11<sup>th</sup> April</span>
      <span class="text-gold/30">&middot;</span>
-     <span class="text-cream/60">9:00 AM onwards</span>
+     <span class="text-cream/60">10:00 AM onwards</span>
     </div>
     <div class="space-y-5 text-cream/70 text-sm leading-relaxed">
      <div>
       <p class="text-gold font-semibold mb-2">General Instructions</p>
       <ul class="space-y-1.5">
-       <li class="flex gap-2"><span class="text-gold/60">1.</span>This is a singles event.</li>
-       <li class="flex gap-2"><span class="text-gold/60">2.</span>Knockout format — lose a match and you're eliminated.</li>
-       <li class="flex gap-2"><span class="text-gold/60">3.</span>Best of 3 boards per match.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span><span><span class="text-cream/80 font-medium">Equipment:</span> Players are requested to bring their own striker if possible; strikers will be provided if unavailable.</span></li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span><span><span class="text-cream/80 font-medium">Singles &amp; Doubles:</span> These rules apply to both Singles and Doubles formats.</span></li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span><span><span class="text-cream/80 font-medium">Conduct:</span> Players must maintain proper social conduct. Any violation or unsportsmanlike behavior will lead to immediate disqualification.</span></li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span><span><span class="text-cream/80 font-medium">Compliance:</span> Any team or player violating the rules mentioned below will be disqualified immediately.</span></li>
       </ul>
      </div>
      <div>
-      <p class="text-gold font-semibold mb-2">Carrom Rules</p>
+      <p class="text-gold font-semibold mb-2">Gameplay Rules</p>
       <ul class="space-y-1.5">
-       <li class="flex gap-2"><span class="text-gold/60">1.</span>Standard Carrom Federation rules apply.</li>
-       <li class="flex gap-2"><span class="text-gold/60">2.</span>Player with the white pieces strikes first in the first board.</li>
-       <li class="flex gap-2"><span class="text-gold/60">3.</span>The striker must be placed within the baseline lines (the two circles define the boundary).</li>
-       <li class="flex gap-2"><span class="text-gold/60">4.</span>The striker must touch both base lines or cross the front line.</li>
-       <li class="flex gap-2"><span class="text-gold/60">5.</span>A coin pocketed from a penalty shot does not count; the opponent gets 1 point.</li>
-       <li class="flex gap-2"><span class="text-gold/60">6.</span>Pocketing the Queen must be covered (followed by pocketing your own coin in the same turn).</li>
-       <li class="flex gap-2"><span class="text-gold/60">7.</span>If you pocket the Queen but fail to cover, the Queen is returned to the centre.</li>
-       <li class="flex gap-2"><span class="text-gold/60">8.</span>Pocketing the striker is a foul — return one of your pocketed coins &amp; opponent gets a free shot.</li>
-       <li class="flex gap-2"><span class="text-gold/60">9.</span>The last coin must not be pocketed before the Queen is covered.</li>
-       <li class="flex gap-2"><span class="text-gold/60">10.</span>If you pocket your last coin before the Queen, it is a due — you owe the opponent 3 points.</li>
-       <li class="flex gap-2"><span class="text-gold/60">11.</span>Board points: Winner earns points equal to the coins left by the loser + 5 points for the Queen (if covered by winner).</li>
-       <li class="flex gap-2"><span class="text-gold/60">12.</span>Maximum 29 points per board; game continues to next board if a player reaches 29 first.</li>
+       <li class="flex gap-2"><span class="text-gold/60">1.</span><span><span class="text-cream/80 font-medium">Queen Coverage:</span> A player may only pocket and cover the Queen if they have already pocketed at least one piece of their assigned color.</span></li>
+       <li class="flex gap-2"><span class="text-gold/60">2.</span><span><span class="text-cream/80 font-medium">Premature Queen:</span> If a player pockets the Queen before they are permitted to cover it, they lose their turn and the Queen is returned to the center.</span></li>
+       <li class="flex gap-2"><span class="text-gold/60">3.</span><span><span class="text-cream/80 font-medium">Failure to Cover:</span> When a player pockets the Queen but fails to cover it on the subsequent shot, the Queen is returned as near as possible to the center circle by the opponent.</span></li>
+       <li class="flex gap-2"><span class="text-gold/60">4.</span><span><span class="text-cream/80 font-medium">Placement:</span> Pieces returned to the center cannot be placed on top of other pieces; they must be kept within the main center circle.</span></li>
+       <li class="flex gap-2"><span class="text-gold/60">5.</span><span><span class="text-cream/80 font-medium">Striker &amp; Piece Foul:</span> If a piece and the striker are pocketed simultaneously, the player may either (a) return two of their pocketed pieces to the board and shoot again, or (b) return one pocketed piece to the board and lose the turn.</span></li>
+       <li class="flex gap-2"><span class="text-gold/60">6.</span><span><span class="text-cream/80 font-medium">Striker Foul:</span> If only the striker is pocketed, the player loses one pocketed piece and their turn.</span></li>
+       <li class="flex gap-2"><span class="text-gold/60">7.</span><span><span class="text-cream/80 font-medium">Player Positioning:</span> Players are not allowed to move their chairs or stand up while the game is in progress.</span></li>
+       <li class="flex gap-2"><span class="text-gold/60">8.</span><span><span class="text-cream/80 font-medium">Board Contact:</span> Only the player's hand/wrist is allowed to touch the carrom board. No other part of the body may rest on or touch the board.</span></li>
+       <li class="flex gap-2"><span class="text-gold/60">9.</span><span><span class="text-cream/80 font-medium">Fixed Sides:</span> Players are not allowed to change sides once the game has commenced.</span></li>
+       <li class="flex gap-2"><span class="text-gold/60">10.</span><span><span class="text-cream/80 font-medium">Opponent's Piece:</span> Sinking an opponent's piece results in a loss of turn. If you sink the opponent's last piece, you lose the board.</span></li>
+       <li class="flex gap-2"><span class="text-gold/60">11.</span><span><span class="text-cream/80 font-medium">Sequence Foul:</span> If you sink your last piece before the Queen has been covered, you lose the board.</span></li>
+       <li class="flex gap-2"><span class="text-gold/60">12.</span><span><span class="text-cream/80 font-medium">Queen &amp; Opponent Piece:</span> If a player pockets the Queen and an opponent's piece in the same shot, the Queen is placed back on the board and the player loses their turn.</span></li>
       </ul>
      </div>
      <div class="bg-gold/10 border border-gold/20 rounded-lg p-3 text-center">
       <p class="text-gold font-semibold text-xs tracking-wider uppercase">Umpire's Decision is Final</p>
+     </div>
+     <div class="bg-maroon/60 border border-gold/10 rounded-lg px-4 py-2.5 text-xs text-cream/50">
+      <span class="text-gold/70 font-semibold">Note:</span> Chess and Carrom will be conducted simultaneously on 11<sup>th</sup> April.
      </div>
      <div>
       <p class="text-gold font-semibold mb-2">Coordinators</p>
@@ -630,7 +633,6 @@
    </div>
   </div>
 
-  <!-- Treasure Hunt Modal -->
   <div id="treasure-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4">
    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="this.parentElement.classList.add('hidden')"></div>
    <div class="relative bg-maroon-deep border border-gold/20 rounded-xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 sm:p-8 shadow-2xl">
@@ -643,24 +645,26 @@
      <svg class="w-4 h-4 text-gold/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
      <span class="text-gold/80 font-medium">3<sup>rd</sup> &amp; 4<sup>th</sup> April</span>
      <span class="text-gold/30">&middot;</span>
-     <span class="text-cream/60">Prelims: 9:30 PM (3rd) &nbsp;|&nbsp; Final: 2:00 PM (4th)</span>
+     <span class="text-cream/60">Prelims: 10:00 PM (3rd) &nbsp;|&nbsp; Final: 2:00 PM (4th)</span>
     </div>
     <div class="space-y-5 text-cream/70 text-sm leading-relaxed">
      <div>
-      <p class="text-gold font-semibold mb-2">Format</p>
-      <p>Two rounds. Teams of 2–3 members each.</p>
-      <ul class="space-y-1.5 mt-2">
-       <li class="flex gap-2"><span class="text-gold/60">Round 1 —</span>Online Prelims starting at 9:30 PM on 3rd April.</li>
-       <li class="flex gap-2"><span class="text-gold/60">Round 2 —</span>Final round at SMYS Hostel on 4th April.</li>
+      <p class="text-gold font-semibold mb-2">Round 1 — Online Prelims</p>
+      <ul class="space-y-1.5">
+       <li class="flex gap-2"><span class="text-gold/60">•</span>This round will be conducted online.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Timing: 10:00 PM on 3rd April.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Top 6 teams will be selected for the finals.</li>
       </ul>
      </div>
      <div>
-      <p class="text-gold font-semibold mb-2">General Rules</p>
+      <p class="text-gold font-semibold mb-2">Round 2 — Final Round <span class="text-cream/40 text-xs font-normal">(4th April, 2:00 PM)</span></p>
       <ul class="space-y-1.5">
-       <li class="flex gap-2"><span class="text-gold/60">1.</span>Teams must register before the event begins.</li>
+       <li class="flex gap-2"><span class="text-gold/60">1.</span>Starting and final destination will be SMYS.</li>
        <li class="flex gap-2"><span class="text-gold/60">2.</span>All team members must be present for the final round.</li>
        <li class="flex gap-2"><span class="text-gold/60">3.</span>Clues must not be shared with other teams — disqualification if found doing so.</li>
-       <li class="flex gap-2"><span class="text-gold/60">4.</span>Coordinator's decision is final in case of disputes.</li>
+       <li class="flex gap-2"><span class="text-gold/60">4.</span>No external support should be used — team will be disqualified if found.</li>
+       <li class="flex gap-2"><span class="text-gold/60">5.</span>Specific rules will be told on the spot.</li>
+       <li class="flex gap-2"><span class="text-gold/60">6.</span>Coordinator's decision is final in case of disputes.</li>
       </ul>
      </div>
      <div>
@@ -686,26 +690,25 @@
     <h3 class="font-display text-2xl font-bold text-gold mb-3">Singing</h3>
     <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm mb-5 bg-gold/[0.07] border border-gold/15 rounded-lg px-4 py-2.5">
      <svg class="w-4 h-4 text-gold/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-     <span class="text-gold/80 font-medium">3<sup>rd</sup> &amp; 4<sup>th</sup> April</span>
+     <span class="text-gold/80 font-medium">3<sup>rd</sup> April</span>
      <span class="text-gold/30">&middot;</span>
-     <span class="text-cream/60">Round 1: 11:30 AM (3rd) &nbsp;|&nbsp; Final: 6:30 PM (4th)</span>
+     <span class="text-cream/60">6:00 PM</span>
     </div>
     <div class="space-y-5 text-cream/70 text-sm leading-relaxed">
      <div>
-      <p class="text-gold font-semibold mb-2">Format — Two Rounds</p>
+      <p class="text-gold font-semibold mb-2">General Guidelines</p>
       <ul class="space-y-1.5">
-       <li class="flex gap-2"><span class="text-gold/60">Round 1 —</span>Solo performance, up to 3.5 minutes. Top performers qualify for the final.</li>
-       <li class="flex gap-2"><span class="text-gold/60">Round 2 —</span>Final round, 5–6 minutes. Any song of the participant's choice.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Accompaniment: Participants must bring their own Tanpura or Sruti Box if required. These will not be provided by the organizers.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Audio Policy: Karaoke is strictly prohibited. All performances must be acoustic or accompanied by live drone instruments.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Judgement: The judge's decision is final and binding.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Updates: Any changes to the rules will be announced on the spot.</li>
       </ul>
      </div>
      <div>
       <p class="text-gold font-semibold mb-2">Rules</p>
       <ul class="space-y-1.5">
-       <li class="flex gap-2"><span class="text-gold/60">1.</span>This is a solo singing competition.</li>
-       <li class="flex gap-2"><span class="text-gold/60">2.</span>Tanpura / shruti box allowed if needed — participant must arrange it themselves.</li>
-       <li class="flex gap-2"><span class="text-gold/60">3.</span>No karaoke or pre-recorded backing tracks allowed.</li>
-       <li class="flex gap-2"><span class="text-gold/60">4.</span>Judging criteria: Sur (pitch accuracy), Taal (rhythm), Presentation, and Overall impact.</li>
-       <li class="flex gap-2"><span class="text-gold/60">5.</span>The judge's decision is final.</li>
+       <li class="flex gap-2"><span class="text-gold/60">Genre:</span>Participants may sing a song from any genre (Kannada songs are preferred).</li>
+       <li class="flex gap-2"><span class="text-gold/60">Time Limit:</span>Maximum of 3 minutes.</li>
       </ul>
      </div>
      <div>
@@ -736,17 +739,20 @@
     </div>
     <div class="space-y-5 text-cream/70 text-sm leading-relaxed">
      <div>
-      <p class="text-gold font-semibold mb-2">Format</p>
-      <p>Team event — 2 members per team. Two-part competition: MCQ round followed by coding challenge on HackerRank.</p>
+      <p class="text-gold font-semibold mb-2">Round 1 — MCQ</p>
+      <ul class="space-y-1.5">
+       <li class="flex gap-2"><span class="text-gold/60">1.</span>The competition shall be played by a team of two.</li>
+       <li class="flex gap-2"><span class="text-gold/60">2.</span>Round 1 consists of MCQ questions with one or more correct answers.</li>
+       <li class="flex gap-2"><span class="text-gold/60">3.</span>Both members take the MCQ together as a team.</li>
+       <li class="flex gap-2"><span class="text-gold/60">4.</span>In case of a tie, starred questions will be used to determine priority.</li>
+      </ul>
      </div>
      <div>
-      <p class="text-gold font-semibold mb-2">Rules</p>
+      <p class="text-gold font-semibold mb-2">Round 2 — HackerRank Coding</p>
       <ul class="space-y-1.5">
-       <li class="flex gap-2"><span class="text-gold/60">1.</span>Teams must have exactly 2 members.</li>
-       <li class="flex gap-2"><span class="text-gold/60">2.</span>Part 1: MCQ round — both members answer independently; combined score counts.</li>
-       <li class="flex gap-2"><span class="text-gold/60">3.</span>Part 2: Coding problems on HackerRank — team submits together.</li>
-       <li class="flex gap-2"><span class="text-gold/60">4.</span>No use of AI tools, online compilers, or external resources unless explicitly permitted.</li>
-       <li class="flex gap-2"><span class="text-gold/60">5.</span>Coordinator's decision is final in all disputes.</li>
+       <li class="flex gap-2"><span class="text-gold/60">1.</span>Hosted on the HackerRank platform — participants sign up to the hosted contest.</li>
+       <li class="flex gap-2"><span class="text-gold/60">2.</span>Solve the given set of problems within the given timeline.</li>
+       <li class="flex gap-2"><span class="text-gold/60">3.</span>Participants can choose any programming language of their choice.</li>
       </ul>
      </div>
      <div>
@@ -868,20 +874,23 @@
      <svg class="w-4 h-4 text-gold/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
      <span class="text-gold/80 font-medium">12<sup>th</sup> April</span>
      <span class="text-gold/30">&middot;</span>
-     <span class="text-cream/60">8:00 AM – 6:00 PM</span>
+     <span class="text-cream/60">10:00 AM – 6:00 PM &nbsp;|&nbsp; Reporting: 9:30 AM</span>
     </div>
     <div class="space-y-5 text-cream/70 text-sm leading-relaxed">
      <div>
       <p class="text-gold font-semibold mb-2">Venue &amp; Equipment</p>
       <ul class="space-y-1.5">
-       <li class="flex gap-2"><span class="text-gold/60">•</span>Venue: Sri Nadaprabhu Kempegowda Indoor Stadium</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Venue: M.N. Krishna Rao Park Badminton Court, Basavanagudi, Bengaluru</li>
        <li class="flex gap-2"><span class="text-gold/60">•</span>Shuttlecock: Yonex Mavis 200i (provided by organisers)</li>
-       <li class="flex gap-2"><span class="text-gold/60">•</span>Non-marking court shoes are mandatory.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Non-marking court shoes are mandatory; barefoot is also allowed.</li>
       </ul>
      </div>
      <div>
       <p class="text-gold font-semibold mb-2">Format</p>
-      <p>Singles — 15-point knockout. Best of 3 games per match.</p>
+      <ul class="space-y-1.5">
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Entire tournament will be conducted in a knockout format.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Points and match format will be decided on the spot.</li>
+      </ul>
      </div>
      <div>
       <p class="text-gold font-semibold mb-2">Rules</p>
@@ -890,10 +899,7 @@
        <li class="flex gap-2"><span class="text-gold/60">2.</span>Toss decides service and side; winner chooses either.</li>
        <li class="flex gap-2"><span class="text-gold/60">3.</span>Service must be diagonal and below the server's waist.</li>
        <li class="flex gap-2"><span class="text-gold/60">4.</span>Shuttle must land within the court boundaries.</li>
-       <li class="flex gap-2"><span class="text-gold/60">5.</span>At 14-all, the player who first reached 14 may choose to play to 15 or 17.</li>
-       <li class="flex gap-2"><span class="text-gold/60">6.</span>Players change ends after each game; in the third game, change at 8 points.</li>
-       <li class="flex gap-2"><span class="text-gold/60">7.</span>A let may be called by the umpire for unforeseen interruptions.</li>
-       <li class="flex gap-2"><span class="text-gold/60">8.</span>Unsportsmanlike behaviour leads to disqualification.</li>
+       <li class="flex gap-2"><span class="text-gold/60">5.</span>Unsportsmanlike behaviour leads to disqualification.</li>
       </ul>
      </div>
      <div>
@@ -901,6 +907,96 @@
       <ul class="space-y-1">
        <li class="flex gap-2 items-center"><span class="text-gold/60">•</span>Pratham Rao A P — <a href="tel:+918088853920" class="text-gold hover:text-gold-light transition-colors">8088853920</a></li>
        <li class="flex gap-2 items-center"><span class="text-gold/60">•</span>Pratheeth S Angari — <a href="tel:+917829643128" class="text-gold hover:text-gold-light transition-colors">7829643128</a></li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <!-- Dumb Charades Modal -->
+  <div id="dumb-charades-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4">
+   <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="this.parentElement.classList.add('hidden')"></div>
+   <div class="relative bg-maroon-deep border border-gold/20 rounded-xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 sm:p-8 shadow-2xl">
+    <button onclick="document.getElementById('dumb-charades-modal').classList.add('hidden')" class="absolute top-4 right-4 text-cream/40 hover:text-gold transition-colors" aria-label="Close modal">
+     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <p class="text-gold/60 text-xs font-semibold tracking-widest uppercase mb-3">Event Rules</p>
+    <h3 class="font-display text-2xl font-bold text-gold mb-3">Dumb Charades</h3>
+    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm mb-5 bg-gold/[0.07] border border-gold/15 rounded-lg px-4 py-2.5">
+     <svg class="w-4 h-4 text-gold/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+     <span class="text-gold/80 font-medium">3<sup>rd</sup> April</span>
+     <span class="text-gold/30">&middot;</span>
+     <span class="text-cream/60">2:00 PM onwards</span>
+    </div>
+    <div class="space-y-5 text-cream/70 text-sm leading-relaxed">
+     <div>
+      <p class="text-gold font-semibold mb-2">Rules</p>
+      <ul class="space-y-1.5">
+       <li class="flex gap-2"><span class="text-gold/60">1.</span>Teams should consist of three members only. No more, no less.</li>
+       <li class="flex gap-2"><span class="text-gold/60">2.</span>Enactment of the given topic/word should be purely based on body language and signs alone. The use of any type of property is considered against game rules.</li>
+       <li class="flex gap-2"><span class="text-gold/60">3.</span>Number of rounds and specific rules will be announced on the spot.</li>
+       <li class="flex gap-2"><span class="text-gold/60">4.</span>Participants must abide by social conduct at all times during the competition. Any violation of the rules may result in disqualification.</li>
+      </ul>
+     </div>
+     <div>
+      <p class="text-gold font-semibold mb-2">Coordinators</p>
+      <ul class="space-y-1">
+       <li class="flex gap-2 items-center"><span class="text-gold/60">•</span>Abhishek G</li>
+       <li class="flex gap-2 items-center"><span class="text-gold/60">•</span>Adhokshaja Kulkarni</li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <!-- E-Sports Modal -->
+  <div id="esports-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4">
+   <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="this.parentElement.classList.add('hidden')"></div>
+   <div class="relative bg-maroon-deep border border-gold/20 rounded-xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 sm:p-8 shadow-2xl">
+    <button onclick="document.getElementById('esports-modal').classList.add('hidden')" class="absolute top-4 right-4 text-cream/40 hover:text-gold transition-colors" aria-label="Close modal">
+     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <p class="text-gold/60 text-xs font-semibold tracking-widest uppercase mb-3">Event Rules</p>
+    <h3 class="font-display text-2xl font-bold text-gold mb-3">E-Sports — Free Fire</h3>
+    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm mb-5 bg-gold/[0.07] border border-gold/15 rounded-lg px-4 py-2.5">
+     <svg class="w-4 h-4 text-gold/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+     <span class="text-gold/80 font-medium">4<sup>th</sup> April</span>
+     <span class="text-gold/30">&middot;</span>
+     <span class="text-cream/60">4V4 Tournament</span>
+    </div>
+    <div class="space-y-5 text-cream/70 text-sm leading-relaxed">
+     <div>
+      <p class="text-gold font-semibold mb-2">Match Settings (CS Rules)</p>
+      <ul class="space-y-1.5">
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Advanced store will be customized for all players.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Skill will remain OFF in entire match.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Wall breaking and wall climbing will be ALLOWED for all players.</li>
+       <li class="flex gap-2"><span class="text-gold/60 font-semibold">•</span>ROOF TOP usage is not allowed — if anyone found using it, the team will be <span class="text-red-400 font-semibold">DISQUALIFIED</span>.</li>
+       <li class="flex gap-2"><span class="text-gold/60 font-semibold">•</span>NO player should keep any Loadout — if found, the team will be <span class="text-red-400 font-semibold">DISQUALIFIED</span>.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Gun Attributes will be OFF for equal and fair gameplay.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>In-Game Recording must be ON for every single player in a team.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>NO PC or PANEL — mobile only.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Host decision is final. NO ARGUMENT.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Maximum 1 registration per hostel.</li>
+      </ul>
+     </div>
+     <div>
+      <p class="text-gold font-semibold mb-2">Guns Not Allowed</p>
+      <ul class="grid grid-cols-2 gap-x-4 gap-y-1.5">
+       <li class="flex gap-2"><span class="text-gold/60">•</span>MAG-7</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>M82B</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>VECTOR</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>CHARGE BUSTER</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>GRENADE</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>SMOKE GRENADE</li>
+       <li class="flex gap-2 col-span-2"><span class="text-gold/60">•</span>FLASH FREEZE &amp; DRAGON FREEZE</li>
+      </ul>
+     </div>
+     <div>
+      <p class="text-gold font-semibold mb-2">Coordinators</p>
+      <ul class="space-y-1">
+       <li class="flex gap-2 items-center"><span class="text-gold/60">•</span>Samarth Joshi</li>
+       <li class="flex gap-2 items-center"><span class="text-gold/60">•</span>Pradyumna Kulkarni</li>
       </ul>
      </div>
     </div>
@@ -972,28 +1068,29 @@
      <svg class="w-4 h-4 text-gold/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
      <span class="text-gold/80 font-medium">4<sup>th</sup> April</span>
      <span class="text-gold/30">&middot;</span>
-     <span class="text-cream/60">Prelims: 9:30 AM &nbsp;|&nbsp; Mains: 4:30 PM</span>
+     <span class="text-cream/60">Prelims: 9:30 AM &nbsp;|&nbsp; Mains: 5:00 PM</span>
     </div>
     <div class="space-y-5 text-cream/70 text-sm leading-relaxed">
      <div>
       <p class="text-gold font-semibold mb-2">Prelims</p>
       <ul class="space-y-1.5">
-       <li class="flex gap-2"><span class="text-gold/60">•</span>25 questions, objective format.</li>
-       <li class="flex gap-2"><span class="text-gold/60">•</span>Maximum 2 members per team for prelims.</li>
-       <li class="flex gap-2"><span class="text-gold/60">•</span>Top 6 teams qualify for the Mains.</li>
+       <li class="flex gap-2"><span class="text-gold/60">1.</span>25 questions, each carrying one mark.</li>
+       <li class="flex gap-2"><span class="text-gold/60">2.</span>Each team can have a maximum of two members.</li>
+       <li class="flex gap-2"><span class="text-gold/60">3.</span>Five starred questions will be given priority in case of a tie.</li>
+       <li class="flex gap-2"><span class="text-gold/60">4.</span>The top 6 teams will qualify for the Mains.</li>
       </ul>
      </div>
      <div>
-      <p class="text-gold font-semibold mb-2">Mains Rules</p>
+      <p class="text-gold font-semibold mb-2">Mains <span class="text-cream/40 text-xs font-normal">(Top 6 Teams)</span></p>
       <ul class="space-y-1.5">
-       <li class="flex gap-2"><span class="text-gold/60">1.</span>6 qualified teams compete in the Mains.</li>
-       <li class="flex gap-2"><span class="text-gold/60">2.</span>Multiple rounds covering General Knowledge, Sports, Science, Entertainment and Current Affairs.</li>
-       <li class="flex gap-2"><span class="text-gold/60">3.</span>Each round will have a fixed time limit per question announced before the round begins.</li>
-       <li class="flex gap-2"><span class="text-gold/60">4.</span>No use of mobile phones or electronic devices at any point.</li>
-       <li class="flex gap-2"><span class="text-gold/60">5.</span>No conferring with audience members is allowed.</li>
-       <li class="flex gap-2"><span class="text-gold/60">6.</span>Passed questions may be offered to other teams for bonus points.</li>
-       <li class="flex gap-2"><span class="text-gold/60">7.</span>In case of a tie, a sudden-death tiebreaker question will be asked.</li>
-       <li class="flex gap-2"><span class="text-gold/60">8.</span>Quizmaster's decision is final and binding in all matters.</li>
+       <li class="flex gap-2"><span class="text-gold/60">1.</span>Qualifying teams must consist of the same members as in prelims. No substitutions allowed.</li>
+       <li class="flex gap-2"><span class="text-gold/60">2.</span>No team can abandon the quiz in the middle.</li>
+       <li class="flex gap-2"><span class="text-gold/60">3.</span>The rounds and scoring methodology will be revealed at the commencement of the quiz.</li>
+       <li class="flex gap-2"><span class="text-gold/60">4.</span>The two teams with the highest score will be awarded prizes.</li>
+       <li class="flex gap-2"><span class="text-gold/60">5.</span>A rapid-fire round may be conducted as a tiebreaker in case of a tie.</li>
+       <li class="flex gap-2"><span class="text-gold/60">6.</span>No electronic devices, gadgets, or written material are allowed during the quiz.</li>
+       <li class="flex gap-2"><span class="text-gold/60">7.</span>Any team found using any of the above will be disqualified.</li>
+       <li class="flex gap-2"><span class="text-gold/60">8.</span>The organizers will have the final say regarding any disputes.</li>
       </ul>
      </div>
      <div>
@@ -1079,16 +1176,15 @@
 
    // Particle system
    (function() {
-    const allSections = document.querySelectorAll('section');
+    const heroSection = document.getElementById('hero');
+    if (!heroSection) return;
     const canvases = [];
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-    allSections.forEach(sec => {
-     const canvas = document.createElement('canvas');
-     canvas.className = 'particle-canvas';
-     sec.insertBefore(canvas, sec.firstChild);
-     canvases.push({ canvas, ctx: canvas.getContext('2d'), section: sec, particles: [] });
-    });
+    const canvas = document.createElement('canvas');
+    canvas.className = 'particle-canvas';
+    heroSection.insertBefore(canvas, heroSection.firstChild);
+    canvases.push({ canvas, ctx: canvas.getContext('2d'), section: heroSection, particles: [] });
 
     function resize() {
      canvases.forEach(c => {
@@ -1108,7 +1204,7 @@
 
     function initParticles() {
      canvases.forEach(c => {
-      const count = Math.max(22, Math.floor((c.w * c.h) / 14000));
+      const count = Math.max(14, Math.floor((c.w * c.h) / 22000));
       c.particles = [];
       for (let i = 0; i < count; i++) {
        const isStar = Math.random() < 0.25;
@@ -1156,7 +1252,7 @@
         const dy = c.particles[i].y - c.particles[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < maxDist) {
-         const lineAlpha = (1 - dist / maxDist) * 0.12;
+         const lineAlpha = (1 - dist / maxDist) * 0.07;
          c.ctx.beginPath();
          c.ctx.moveTo(c.particles[i].x, c.particles[i].y);
          c.ctx.lineTo(c.particles[j].x, c.particles[j].y);
