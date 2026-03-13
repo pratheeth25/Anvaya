@@ -277,6 +277,9 @@
        <p class="font-display text-gold text-xl font-semibold">3<sup>rd</sup> April</p>
       </div>
       <ul class="p-5 space-y-3">
+       <li class="flex items-center gap-3 text-cream/80 text-base cursor-pointer hover:text-gold transition-colors" onclick="document.getElementById('kannada-kalarava-modal').classList.remove('hidden')">
+        <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Kannada Kalarava
+       </li>
        <li class="flex items-center gap-3 text-cream/80 text-base cursor-pointer hover:text-gold transition-colors" onclick="document.getElementById('dumb-charades-modal').classList.remove('hidden')">
         <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Dumb Charades
        </li>
@@ -326,7 +329,7 @@
         <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>Table Tennis
        </li>
       </ul>
-      <p class="px-5 pb-4 text-cream/40 text-xs"><span class="text-gold/60 font-semibold">Note:</span> Chess &amp; Carrom happen simultaneously.</p>
+      <p class="px-5 pb-4 text-cream/40 text-xs"><span class="text-gold/60 font-semibold">Note:</span> Chess &amp; Carrom will happen simultaneously.</p>
      </div>
 
      <!-- 12th April -->
@@ -419,7 +422,7 @@
       <h3 class="font-display text-2xl font-semibold text-gold mb-2">Cultural Events</h3>
       <p class="text-cream/40 text-base mb-1">3<sup>rd</sup> &amp; 4<sup>th</sup> April</p>
       <p class="text-cream/40 text-base mb-6">Dumb Charades, Singing, Treasure Hunt, Codethon, E Sports, Quiz</p>
-      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Register for Cultural Events"
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfrCozR5VmJbA_fXD-HYZkM-QDJuGuWCCKLnh2y_MmYyOQ8nA/viewform" target="_blank" rel="noopener noreferrer" aria-label="Register for Cultural Events"
        class="mt-auto inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-lg bg-gold hover:bg-gold-dark text-maroon-dark font-semibold text-base transition-colors">
        Register Now
        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -438,7 +441,7 @@
       <h3 class="font-display text-2xl font-semibold text-gold mb-2">Sports Events</h3>
       <p class="text-cream/40 text-base mb-1">11<sup>th</sup> &amp; 12<sup>th</sup> April</p>
       <p class="text-cream/40 text-base mb-6">Chess, Carrom, Table Tennis, Badminton</p>
-      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Register for Sports Events"
+      <a href="https://forms.gle/PnGgfnUhActMYsQP9" target="_blank" rel="noopener noreferrer" aria-label="Register for Sports Events"
        class="mt-auto inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-lg bg-gold hover:bg-gold-dark text-maroon-dark font-semibold text-base transition-colors">
        Register Now
        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -715,6 +718,33 @@
    </div>
   </div>
 
+  <!-- Kannada Kalarava Modal -->
+  <div id="kannada-kalarava-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4">
+   <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="this.parentElement.classList.add('hidden')"></div>
+   <div class="relative bg-maroon-deep border border-gold/20 rounded-xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 sm:p-8 shadow-2xl">
+    <button onclick="document.getElementById('kannada-kalarava-modal').classList.add('hidden')" class="absolute top-4 right-4 text-cream/40 hover:text-gold transition-colors" aria-label="Close modal">
+     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <p class="text-gold/60 text-xs font-semibold tracking-widest uppercase mb-3">Event Rules</p>
+    <h3 class="font-display text-2xl font-bold text-gold mb-3">Kannada Kalarava</h3>
+    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm mb-5 bg-gold/[0.07] border border-gold/15 rounded-lg px-4 py-2.5">
+     <svg class="w-4 h-4 text-gold/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+     <span class="text-gold/80 font-medium">3<sup>rd</sup> April</span>
+     <span class="text-gold/30">&middot;</span>
+     <span class="text-cream/60">10:00 AM onwards</span>
+    </div>
+    <div class="space-y-5 text-cream/70 text-sm leading-relaxed">
+     <div>
+      <p class="text-gold font-semibold mb-2">Rules</p>
+      <ul class="space-y-1.5">
+       <li class="flex gap-2"><span class="text-gold/60">•</span>It will be an individual competition.</li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span>Rules will be announced on the spot.</li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+
   <!-- Codethon Modal -->
   <div id="codethon-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4">
    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="this.parentElement.classList.add('hidden')"></div>
@@ -777,12 +807,12 @@
     <div class="space-y-5 text-cream/70 text-sm leading-relaxed">
      <div>
       <p class="text-gold font-semibold mb-2">Format</p>
-      <p>Rapid Chess — 10 minutes per player + 1 second increment per move. Swiss system rounds followed by knockouts.</p>
+      <p>10 minutes per player.</p>
      </div>
      <div>
       <p class="text-gold font-semibold mb-2">Rules</p>
       <ul class="space-y-1.5">
-       <li class="flex gap-2"><span class="text-gold/60">1.</span>FIDE laws of chess apply throughout.</li>
+       <li class="flex gap-2"><span class="text-gold/60">1.</span>FIDE rules apply.</li>
        <li class="flex gap-2"><span class="text-gold/60">2.</span>Touch-move rule is strictly enforced — if you touch a piece you must move it.</li>
        <li class="flex gap-2"><span class="text-gold/60">3.</span>Illegal moves: first illegal move results in 2 minutes added to opponent's clock; second illegal move is a loss.</li>
        <li class="flex gap-2"><span class="text-gold/60">4.</span>Mobile phones must be switched off or on silent and kept away from the board.</li>
@@ -1050,11 +1080,11 @@
        <li class="flex gap-2"><span class="text-gold/60">•</span>NO PC or PANEL — mobile only.</li>
        <li class="flex gap-2"><span class="text-gold/60">•</span>Host decision is final. NO ARGUMENT.</li>
        <li class="flex gap-2"><span class="text-gold/60">•</span>Maximum 1 registration per hostel.</li>
-       <li class="flex gap-2"><span class="text-gold/60">•</span><em>More games may be added on demand.</em></li>
+       <li class="flex gap-2"><span class="text-gold/60">•</span><em>More games may be added on demand (Counter Strike, NFS).</em></li>
       </ul>
      </div>
      <div class="bg-maroon/60 border border-gold/10 rounded-lg px-4 py-2.5 text-xs text-cream/50">
-      <span class="text-gold/70 font-semibold">Note:</span> More games may be added on demand.
+      <span class="text-gold/70 font-semibold">Note:</span> More games may be added on demand — Counter Strike, NFS.
       </ul>
      </div>
      <div>
@@ -1353,13 +1383,11 @@
      });
      requestAnimationFrame(animate);
     }
-
     resize();
     initParticles();
     animate();
     window.addEventListener('resize', () => { resize(); initParticles(); });
    })();
   </script>
-
  </body>
 </html>
